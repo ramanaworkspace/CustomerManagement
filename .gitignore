@@ -1,0 +1,53 @@
+# Build output
+bin/
+obj/
+publish/
+*.zip
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+
+# AWS Lambda tooling
+aws-lambda-tools-defaults.json
+
+# Secrets
+secrets.json
+*.secrets.json
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# JetBrains Rider
+.idea/
+
+# Test results
+TestResult*/  
+*.ncrunch*  
+*.vstest*
+
+# dotnet watch / hot reload
+.dotnet-watch.json
+
+# GitHub Actions artifacts
+*.coverage
+coverage/
+/.vs/AWSLambdaPractice01/CopilotIndices/17.14.878.3237/*.db
+/.vs/AWSLambdaPractice01/FileContentIndex/*.vsidx
+/.vs/AWSLambdaPractice01/config/*.config
+/.vs/AWSLambdaPractice01/v17/*.v2
+/.vs/AWSLambdaPractice01/v17/*.json
+/.vs/ProjectEvaluation/*.bin
+/.vs/AWSLambdaPractice01/CopilotIndices/17.14.878.3237/*.db-shm
+/.vs/AWSLambdaPractice01/CopilotIndices/17.14.878.3237/*.db-wal
