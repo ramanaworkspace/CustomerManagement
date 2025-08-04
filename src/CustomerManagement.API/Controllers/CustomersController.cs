@@ -1,11 +1,12 @@
 ﻿using CustomerManagement.Application.Commands;
 using CustomerManagement.Application.Queries;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CustomerManagement.API.Controllers
 {
-    //[Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin")]
     [ApiController]
     [Route("api/v1/[controller]")]
     public class CustomersController : ControllerBase

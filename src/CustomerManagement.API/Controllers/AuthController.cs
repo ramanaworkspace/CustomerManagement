@@ -18,7 +18,7 @@ namespace CustomerManagement.API.Controllers
         [HttpPost("login")]
         public IActionResult Login(LoginRequest req)
         {
-            if (req.Username == "admin" && req.Password == "password")
+            if (req.Username == "Admin" && req.Password == "password")
             {
                 var token = GenerateJwtToken(req.Username, req.Role);
                 return Ok(new { token });
