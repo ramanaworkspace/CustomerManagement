@@ -5,7 +5,7 @@ VisualStudioVersion = 17.14.36310.24
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerManagement.API", "CustomerManagement.API.csproj", "{0D975BD0-BA49-4B61-9A91-287570E0D1B8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CustomerManagement.DataAccess", "CustomerManagement.DataAccess", "{64C50510-4586-4526-A22A-7C117FD2E21E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistent", "Persistent", "{64C50510-4586-4526-A22A-7C117FD2E21E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{109771BA-455E-44C6-A61E-ED26DADEB40C}"
 EndProject

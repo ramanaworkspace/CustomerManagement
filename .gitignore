@@ -51,3 +51,10 @@ coverage/
 /.vs/ProjectEvaluation/*.bin
 /.vs/AWSLambdaPractice01/CopilotIndices/17.14.878.3237/*.db-shm
 /.vs/AWSLambdaPractice01/CopilotIndices/17.14.878.3237/*.db-wal
+/src/CustomerManagement.API/.vs/CustomerManagement/CopilotIndices/17.14.878.3237/*.db
+/src/CustomerManagement.API/.vs/CustomerManagement/CopilotIndices/17.14.878.3237/*.db-shm
+/src/CustomerManagement.API/.vs/CustomerManagement/CopilotIndices/17.14.878.3237/*.db-wal
+/src/CustomerManagement.API/.vs/CustomerManagement/DesignTimeBuild/*.v2
+/src/CustomerManagement.API/.vs/CustomerManagement/FileContentIndex/*.vsidx
+/src/CustomerManagement.API/.vs/CustomerManagement/config/*.config
+/src/CustomerManagement.API/.vs/CustomerManagement/v17/*.json

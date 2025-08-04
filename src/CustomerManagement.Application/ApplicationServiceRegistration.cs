@@ -1,7 +1,4 @@
-﻿using AutoMapper;
-using CustomerManagement.Application.Mappings;
-using FluentValidation;
-using MediatR;
+﻿using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
