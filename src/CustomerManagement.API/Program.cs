@@ -1,13 +1,8 @@
-using AutoMapper;
 using CustomerManagement.Application;
 using CustomerManagement.Application.Commands;
-using CustomerManagement.Application.Mappings;
-using CustomerManagement.Application.Queries;
-using CustomerManagement.Application.Validators;
 using CustomerManagement.Infrastructure;
 using FluentValidation;
-using MediatR;
-using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Diagnostics;
 
 internal class Program
 {
@@ -18,21 +13,36 @@ internal class Program
         builder.Services.AddControllers();
         builder.Services.AddSwaggerGen();
         builder.Services.AddEndpointsApiExplorer();
-
         builder.Services.AddApplication();
         builder.Services.AddInfrastructure(builder.Configuration);
-        builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-        builder.Services.AddValidatorsFromAssemblyContaining<CreateCustomerValidator>();
+        builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());        
         builder.Services.AddAuthorization();
-        builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<GetAllCustomersQuery>());
+        builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<CreateCustomerCommand>());
         var app = builder.Build();
 
         app.UseSwagger();
         app.UseSwaggerUI();
         app.UseAuthentication();
         app.UseAuthorization();
-
         app.MapControllers();
+        app.UseExceptionHandler(errorApp =>
+        {
+            errorApp.Run(async context =>
+            {
+                context.Response.StatusCode = StatusCodes.Status400BadRequest;
+                context.Response.ContentType = "application/json";
+
+                var exceptionHandlerPathFeature = context.Features.Get<IExceptionHandlerPathFeature>();
+
+                if (exceptionHandlerPathFeature?.Error is ValidationException validationException)
+                {
+                    var errors = validationException.Errors
+                        .Select(e => new { e.PropertyName, e.ErrorMessage });
+
+                    await context.Response.WriteAsJsonAsync(new { Errors = errors });
+                }
+            });
+        });
         app.Run();
 
     }
