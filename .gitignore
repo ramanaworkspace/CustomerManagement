@@ -40,7 +40,6 @@ TestResult*/
 # dotnet watch / hot reload
 .dotnet-watch.json
 
-
 # Local .terraform directories
 .terraform/
 **/.terraform/
