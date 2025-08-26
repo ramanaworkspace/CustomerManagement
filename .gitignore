@@ -13,9 +13,6 @@ publish/
 # Logs
 *.log
 
-# AWS Lambda tooling
-aws-lambda-tools-defaults.json
-
 # Secrets
 secrets.json
 *.secrets.json
@@ -46,18 +43,5 @@ TestResult*/
 # GitHub Actions artifacts
 *.coverage
 coverage/
-/.vs/AWSLambdaPractice01/CopilotIndices/17.14.878.3237/*.db
-/.vs/AWSLambdaPractice01/FileContentIndex/*.vsidx
-/.vs/AWSLambdaPractice01/config/*.config
-/.vs/AWSLambdaPractice01/v17/*.v2
-/.vs/AWSLambdaPractice01/v17/*.json
-/.vs/ProjectEvaluation/*.bin
-/.vs/AWSLambdaPractice01/CopilotIndices/17.14.878.3237/*.db-shm
-/.vs/AWSLambdaPractice01/CopilotIndices/17.14.878.3237/*.db-wal
-/src/CustomerManagement.API/.vs/CustomerManagement/CopilotIndices/17.14.878.3237/*.db
-/src/CustomerManagement.API/.vs/CustomerManagement/CopilotIndices/17.14.878.3237/*.db-shm
-/src/CustomerManagement.API/.vs/CustomerManagement/CopilotIndices/17.14.878.3237/*.db-wal
-/src/CustomerManagement.API/.vs/CustomerManagement/DesignTimeBuild/*.v2
-/src/CustomerManagement.API/.vs/CustomerManagement/FileContentIndex/*.vsidx
-/src/CustomerManagement.API/.vs/CustomerManagement/config/*.config
-/src/CustomerManagement.API/.vs/CustomerManagement/v17/*.json
+/.vs/
+.VS/
